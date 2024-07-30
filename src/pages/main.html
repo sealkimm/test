@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>main</title>
-</head>
-<body>
+{%
+	set pageInfo = {
+		section: 'promotion',
+		title: '기획전',
+		order: '0'
+	}
+%}
+{% extends "layout.html" %}
+{% block content %}
   <ul>
     메인페이지 입니다
     <li><a href="./about.html">about</a></li>
@@ -13,7 +14,4 @@
     <li><a href="./franchise.html">franchise</a></li>
     <li><a href="./contact.html">contact</a></li>
   </ul>
-  <header></header>
-  <footer></footer>
-</body>
-</html>
+{% endblock %}

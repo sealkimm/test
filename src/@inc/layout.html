@@ -1,0 +1,16 @@
+{% macro include(fileName) -%}
+	{% include fileName ignore missing -%}
+{% endmacro -%}
+<!DOCTYPE html>
+<html lang="ko">
+  {% include("./head.html") %}
+<body>
+  <div class="wrapper">
+    {% include("./header.html") %}
+
+    {% block content -%}{%- endblock %}
+    
+    {% include("./footer.html") %}
+  </div>
+</body>
+</html>
