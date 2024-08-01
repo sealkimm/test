@@ -11,6 +11,20 @@ module.exports = {
   module : {
     rules: [
       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+          {
+            loader: 'nunjucks-html-loader',
+            options: {
+              searchPaths: ['./src/@inc'], // 템플릿 파일의 경로 설정
+            },
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader', "sass-loader"],
         exclude: /node_modules/,
@@ -28,29 +42,24 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      template: './src/pages/main.html',// main index
       filename: 'index.html',
-      template: './src/pages/main.html',
-      chunks: ['main'],
     }),
     new HtmlWebpackPlugin({
-      filename: 'about.html',
       template: './src/pages/about.html',
-      chunks: ['about'],
+      filename: 'about.html',
     }),
     new HtmlWebpackPlugin({
-      filename: 'brands.html',
       template: './src/pages/brands.html',
-      chunks: ['brands'],
+      filename: 'brands.html',
     }),
     new HtmlWebpackPlugin({
-      filename: 'franchise.html',
       template: './src/pages/franchise.html',
-      chunks: ['franchise'],
+      filename: 'franchise.html',
     }),
     new HtmlWebpackPlugin({
-      filename: 'contact.html',
       template: './src/pages/contact.html',
-      chunks: ['contact'],
+      filename: 'contact.html',
     }),
-  ],
+  ]
 };

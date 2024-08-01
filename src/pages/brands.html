@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brands</title>
-</head>
-<body>
-  Brands 페이지입니다.
-</body>
-</html>
+
+{% set pageInfo = {
+  'section': 'brands',
+  'title': '브랜드소개',
+  'order': '0'
+} %}
+{% extends "layout.html" %}
+
+{% block content %}
+  <p>브랜드 페이지입니다.</p>
+{% endblock %}

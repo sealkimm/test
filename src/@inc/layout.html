@@ -1,16 +1,28 @@
-{% macro include(fileName) -%}
-	{% include fileName ignore missing -%}
-{% endmacro -%}
 <!DOCTYPE html>
 <html lang="ko">
-  {% include("./head.html") %}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if pageInfo.title -%}
+    <title>{{pageInfo.title}} | BUUK</title>
+    {% else -%}
+    <title>BUUK</title>
+    {% endif %}
+  
+  </head>
 <body>
   <div class="wrapper">
-    {% include("./header.html") %}
+    <!-- header -->
+    {% include 'header.html' %}
+    <!--// header -->
 
-    {% block content -%}{%- endblock %}
-    
-    {% include("./footer.html") %}
+    <!-- content -->
+      {% block content %}{% endblock %}
+    <!-- //content -->
+  
+    <!-- footer -->
+    {% include 'footer.html' %}
+    <!-- //footer -->
   </div>
 </body>
 </html>
