@@ -1,9 +1,9 @@
 .blind {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    margin: -1px;
-} 
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	margin: -1px;
+}
 // mixin에 넣어야 하나??

@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const postcssScss = require('postcss-scss');
 
 module.exports = {
   mode: 'development',
@@ -63,8 +64,9 @@ module.exports = {
       filename: 'contact.html',
     }),
     new StylelintPlugin({
-      files: '**/*.scss',
+      files: './src/scss/**/*.scss',
       fix: true, // 자동 수정 기능을 활성화
+      customSyntax: postcssScss,
     }),
   ],
 };
