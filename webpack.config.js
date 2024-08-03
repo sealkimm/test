@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -8,7 +9,7 @@ module.exports = {
     filename: 'app.bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  module : {
+  module: {
     rules: [
       {
         test: /\.html$/,
@@ -26,15 +27,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', "sass-loader"],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
         exclude: /node_modules/,
       },
       {
         test: /\.scss$/,
         use: [
           'style-loader', // 3. Injects styles into DOM
-          'css-loader',   // 2. Turns css into commonjs
-          'sass-loader',  // 1. Compiles Sass to CSS
+          'css-loader', // 2. Turns css into commonjs
+          'sass-loader', // 1. Compiles Sass to CSS
         ],
         exclude: /node_modules/,
       },
@@ -42,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/pages/main.html',// main index
+      template: './src/pages/main.html', // main index
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
@@ -61,5 +62,9 @@ module.exports = {
       template: './src/pages/contact.html',
       filename: 'contact.html',
     }),
-  ]
+    new StylelintPlugin({
+      files: '**/*.scss',
+      fix: true, // 자동 수정 기능을 활성화
+    }),
+  ],
 };

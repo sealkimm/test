@@ -1,0 +1,35 @@
+.header {
+	background-color: $primary-color;
+
+	.header-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1280px;
+		height: 100px;
+		padding: 0 60px;
+		margin: 0 auto;
+
+		.logo {
+			@include size(128px, 32px);
+
+			background: url('/dist/img/common/logo.png') no-repeat;
+			background-size: cover;
+			color: #abc;
+			width: 30px !important;
+		}
+
+		nav {
+			.nav-list {
+				display: flex;
+				gap: 56px;
+
+				.nav-link {
+					display: block;
+					padding: 6px 12px;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
