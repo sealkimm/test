@@ -65,6 +65,7 @@ module.exports = {
     }),
     new StylelintPlugin({
       files: './src/scss/**/*.scss',
+      // configFile: '.stylelintrc',
       fix: true, // 자동 수정 기능을 활성화
       customSyntax: postcssScss,
     }),

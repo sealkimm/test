@@ -3,10 +3,10 @@
 
 	.header-wrap {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
-		max-width: 1280px;
+		align-items: center;
 		height: 100px;
+		max-width: 1280px;
 		padding: 0 60px;
 		margin: 0 auto;
 
@@ -15,8 +15,6 @@
 
 			background: url('/dist/img/common/logo.png') no-repeat;
 			background-size: cover;
-			color: #abc;
-			width: 30px !important;
 		}
 
 		nav {
