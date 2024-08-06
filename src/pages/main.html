@@ -1,10 +1,358 @@
-{% set pageInfo = { 'section': 'main', 'title': '', 'order': '0' } %} {% extends
-"layout.html" %} {% block content %}
-<ul>
-  메인페이지 입니다
-  <li><a href="./about.html">about</a></li>
-  <li><a href="./brands.html">brands</a></li>
-  <li><a href="./franchise.html">franchise</a></li>
-  <li><a href="./contact.html">contact</a></li>
-</ul>
+{% set pageInfo = { 'section': 'main', 'title': '', 'order': '0' } %} {% extends "layout.html" %} {% block content %}
+<main class="main">
+	<section class="sc-main">
+		<img src="/dist/img/main/main_visual.webp" alt="메인비주얼 이미지" />
+		<div class="overlay"><span class="blind">오버레이 이미지</span></div>
+		<div class="title-wrap">
+			<div class="img">
+				<img src="/dist/img/main/main_visual_logo.png" alt="비유유케이 로고" />
+			</div>
+			<p class="txt">
+				세계의 맛을 담은 유러피안 F&B, 비유유케이<br />
+				평온하고 품격있는 외식업 문화를 선도하는 <strong>BUUK</strong>와 함께 <strong>성공적인 창업의 길</strong>을 열어보세요.
+			</p>
+		</div>
+	</section>
+
+	<section class="sc-about">
+		<div class="text-group">
+			<div class="title">
+				<span class="txt">저희는 진실된 요리와 섬세한 서비스,</span>
+				<span class="txt">그리고 새로운 공간에 대한</span>
+				<span class="txt">라이프 스타일을 지향합니다.</span>
+			</div>
+			<div class="desc">맛있는 음식과 넓은 공간,<br />편안한 분위기<br /><br />그러나 무엇보다도,<br /><br />고객을 가장 소중히 여기는 공간이 되고자 합니다.</div>
+		</div>
+		<div class="img-group">
+			<div class="img-wrap">
+				<img src="/dist/img/main/main_about01.webp" alt="부엌간 공간 이미지1" />
+				<img src="/dist/img/main/main_about02.webp" alt="부엌간 공간 이미지2" />
+			</div>
+			<div class="decor"><span class="blind">컬러 박스</span></div>
+		</div>
+	</section>
+
+	<section class="sc-brands">
+		<div class="text-group">
+			<h3 class="title">Our Brands</h3>
+			<article class="wrap">
+				<div class="brand">부엌간</div>
+				<p class="desc">“My Favorite European Restaurant” 이라는 슬로건을 기반으로<br />운영하는 유러피안 레스토랑 ‘부엌간’입니다.</p>
+			</article>
+			<article class="wrap">
+				<div class="brand">부엌간 차이니즈</div>
+				<p>일반 중식당과 다르게 유러피안 감성을 기반으로 한 차이니즈 레스토랑입니다.</p>
+			</article>
+			<article class="wrap">
+				<div class="brand">카페 드 부엌</div>
+				<p>카페 드 부엌은 단순한 유럽 감성이 아닌 디테일한 유러피안 감성을 담아내,<br />방문하시는 고객님들께 공간적 가치와 커피의 즐거움을 선사합니다.</p>
+			</article>
+			<a href="" class="more-link">view more</a>
+		</div>
+		<div class="img-group">
+			<div class="img"><img src="/dist/img/main/main_brands01.webp" alt="부엌간 이미지" /></div>
+			<div class="img"><img src="/dist/img/main/main_brands02.webp" alt="부엌간 차이니즈 이미지" /></div>
+			<div class="img"><img src="/dist/img/main/main_brands03.webp" alt="카페 드 부엌 이미지" /></div>
+		</div>
+		<div class="circle">
+			<span>01</span>
+			<span>03</span>
+		</div>
+	</section>
+
+	<section class="sc-menu">
+		<div class="text-group">
+			<h3 class="title">MENU</h3>
+			<p class="desc">익숙하지만 새롭고, 트렌디하지만 품격 있는 요리<br />대중성과 차별성 있는 메뉴와 수익성까지 갖춘 BUUK의 메뉴를 소개합니다.</p>
+		</div>
+		<div class="menu-group">
+			<div class="inner">
+				<div class="line"></div>
+				<article>
+					<div class="brand-wrap">
+						<p class="brand">부엌간</p>
+						<ul class="menu-list">
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+						</ul>
+					</div>
+					<div class="brand-wrap second">
+						<ul class="menu-list">
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+						</ul>
+						<p class="brand">부엌간 차이니즈</p>
+					</div>
+					<div class="brand-wrap third">
+						<p class="brand">카페 드 부엌</p>
+						<ul class="menu-list">
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img src="/dist/img/main/test.webp" alt="부엌간 메뉴 이미지" />
+									<figcaption>메뉴명</figcaption>
+								</figure>
+							</li>
+						</ul>
+					</div>
+				</article>
+				<a href="" class="more-link">view more</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="sc-store">
+		<div class="text-group">
+			<h3 class="title">Store</h3>
+			<p class="desc">주변의 가까운 BUUK의 매장을<br />확인해 보세요!</p>
+		</div>
+		<div class="img-group">
+			<div class="col-left">
+				<div class="swiper col-left-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-right">
+				<div class="swiper col-right-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<img src="/dist/img/main/test3.webp" alt="비유유케이 스토어 이미지" />
+								<div class="circle">
+									<dl>
+										<dt>부엌간 차이니즈 해운대점</dt>
+										<dd>BUUK</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sc-contact">
+		<div class="text-group">
+			<span class="contact">Contact Us</span>
+			<span class="desc">외식업 프랜차이즈 창업의 꿈.</span>
+			<p class="title">지금 바로 시작할 수 있습니다!</p>
+		</div>
+		<a href="" class="contact-link">
+			<div class="img"><img src="/dist/img/main/main_contact_circle.png" alt="contact BUUK" /></div>
+			<div class="circle"><span class="blind">contact 바로가기</span></div>
+		</a>
+	</section>
+</main>
+
+<script>
+	const mainStoreLeftSwiper = new Swiper('.sc-store .col-left .col-left-swiper', {
+		direction: 'vertical',
+		loop: true,
+		slidesPerView: 3,
+		speed: 6000,
+		allowTouchMove: false,
+		spaceBetween: 40,
+		pauseOnMouseEnter: true,
+		autoplay: {
+			delay: 1,
+		},
+	});
+
+	const mainStoreRightSwiper = new Swiper('.sc-store .col-right .col-right-swiper', {
+		direction: 'vertical',
+		loop: true,
+		slidesPerView: 3,
+		speed: 6000,
+		allowTouchMove: false,
+		spaceBetween: 40,
+		autoplay: {
+			delay: 1,
+			reverseDirection: true,
+		},
+	});
+</script>
 {% endblock %}
