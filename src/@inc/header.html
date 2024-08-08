@@ -8,19 +8,30 @@
 		<p></p>
 		<nav class="nav">
 			<ul class="nav-list">
-				<li>
+				<li class="nav-item">
 					<a href="about.html" class="nav-link"><span>ABOUT</span></a>
 				</li>
-				<li>
+				<li class="nav-item">
 					<a href="brands.html" class="nav-link"><span>BRANDS</span></a>
 				</li>
-				<li>
+				<li class="nav-item">
 					<a href="franchise.html" class="nav-link"><span>FRANCHISE</span></a>
 				</li>
-				<li>
+				<li class="nav-item">
 					<a href="contact.html" class="nav-link"><span>CONTACT</span></a>
 				</li>
 			</ul>
 		</nav>
 	</div>
 </header>
+<script>
+	const currentUrl = window.location.pathname;
+	const $navItems = document.querySelectorAll('.nav .nav-item');
+
+	$navItems.forEach((item) => {
+		const link = item.querySelector('.nav-link').getAttribute('href');
+		if (currentUrl.includes(link)) {
+			item.classList.add('active');
+		}
+	});
+</script>
