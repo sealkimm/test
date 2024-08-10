@@ -5,7 +5,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-image: url('/dist/img/sub/franchise_banner.webp');
+		background-image: url('../img/sub/franchise_banner.webp');
 		background-repeat: no-repeat;
 		background-position: center;
 		.title {
@@ -83,7 +83,7 @@
 					top: 50%;
 					right: -48px;
 					display: block;
-					background-image: url('/dist/img/common/arrow-right.png');
+					background-image: url('../img/common/arrow-right.png');
 					background-repeat: no-repeat;
 					background-position: center;
 					transform: translateX(-50%);

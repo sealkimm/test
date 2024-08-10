@@ -40,6 +40,17 @@ module.exports = {
         ],
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|webp)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: (pathData) => {
+            // 원본 경로를 유지하면서 'img' 폴더로 이동
+            const filePath = pathData.filename.replace(/^src\//, '/');
+            return filePath;
+          },
+        },
+      },
     ],
   },
   plugins: [
@@ -49,19 +60,19 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/about.html',
-      filename: 'about.html',
+      filename: 'sub/about.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/brands.html',
-      filename: 'brands.html',
+      filename: 'sub/brands.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/franchise.html',
-      filename: 'franchise.html',
+      filename: 'sub/franchise.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/contact.html',
-      filename: 'contact.html',
+      filename: 'sub/contact.html',
     }),
     new StylelintPlugin({
       files: './src/scss/**/*.scss',
