@@ -202,13 +202,17 @@
 	const closePopBtn = agreePop.querySelector('.agree-pop .closePopBtn');
 
 	//팝업 열기
-	showPopBtn.addEventListener('click', () => {
-		agreePop.style.display = 'block';
-	});
+	if (showPopBtn && agreePop) {
+		showPopBtn.addEventListener('click', () => {
+			agreePop.style.display = 'block';
+		});
+	}
 
 	// 팝업 닫기
-	closePopBtn.addEventListener('click', () => {
-		agreePop.style.display = 'none';
-	});
+	if (closePopBtn && agreePop) {
+		closePopBtn.addEventListener('click', () => {
+			agreePop.style.display = 'none';
+		});
+	}
 </script>
 {% endblock %}

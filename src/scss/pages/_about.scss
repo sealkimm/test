@@ -22,14 +22,18 @@
 			margin-top: 90px;
 		}
 	}
-	.brand-list {
+	.logo-list {
 		display: flex;
 		justify-content: space-between;
-		margin-top: 166px;
+		margin-top: 182px;
 		text-align: center;
+		.img-box {
+			height: 240px;
+		}
 		.brand {
 			font-size: 22px;
 			font-weight: 600;
+			margin-top: 50px;
 		}
 	}
 }

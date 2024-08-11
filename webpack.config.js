@@ -9,6 +9,7 @@ module.exports = {
   output: {
     filename: 'app.bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    // publicPath: '/', // 웹서버의 루트 디렉토리로 설정
   },
   module: {
     rules: [
@@ -46,7 +47,7 @@ module.exports = {
         generator: {
           filename: (pathData) => {
             // 원본 경로를 유지하면서 'img' 폴더로 이동
-            const filePath = pathData.filename.replace(/^src\//, '/');
+            const filePath = pathData.filename.replace(/^src\//, '');
             return filePath;
           },
         },
@@ -73,6 +74,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/pages/contact.html',
       filename: 'sub/contact.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/brand.html',
+      filename: 'sub/brand.html',
     }),
     new StylelintPlugin({
       files: './src/scss/**/*.scss',

@@ -1,70 +1,37 @@
 {% set pageInfo = { 'section': 'brands', 'title': '브랜드소개', 'order': '0' } %} {% extends "layout.html" %} {% block content %}
+
 <div class="brands-pg">
 	<div class="brands-wrap">
-		<div class="title-group">
-			<h2 class="title">BRANDS</h2>
-		</div>
-		<div class="brands-group">
-			<ul class="brands-list">
-				<li class="brands-item">
-					<h3 class="name">부엌간</h3>
-					<img src="../img/sub/brands/brands_bk.webp" alt="부엌간 이미지" />
-					<div class="overlay"><span class="blind">오버레이 이미지</span></div>
-				</li>
-				<li class="brands-item">
-					<h3 class="name">부엌간 차이니즈</h3>
-					<img src="../img/sub/brands/brands_bkc.webp" alt="부엌간 차이니즈 이미지" />
-					<div class="overlay"><span class="blind">오버레이 이미지</span></div>
-				</li>
-				<li class="brands-item">
-					<h3 class="name">카페 드 부엌</h3>
-					<img src="../img/sub/brands/brands_cbk.webp" alt="카페 드 부엌 이미지" />
-					<div class="overlay"><span class="blind">오버레이 이미지</span></div>
-				</li>
-			</ul>
-		</div>
-
-		<!-- 각 브랜드 페이지 -->
-		<div>
+		<section class="sc-brands">
 			<div class="title-group">
-				<h2 class="title">부엌간</h2>
+				<h2 class="title">BRANDS</h2>
 			</div>
-			<div class="cont-wrap">
-				<div class="info-area">
-					<div class="swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide"></div>
-						</div>
-					</div>
-					<div></div>
-				</div>
-				<div class="menu-area">
-					<div class="">
-						<span>Menu</span>
-						<p>부엌간이 만들면 평범한 메뉴도 특별해집니다.</p>
-					</div>
-					<div class="swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide"></div>
-						</div>
-					</div>
-				</div>
-				<div class="store-area">
-					<div class="">
-						<span>Store</span>
-						<p>주변의 가까운 BUUK의 매장을 확인해 보세요!</p>
-					</div>
-					<ul>
-						<li><span>동명 직영점</span> 광주 동구 동계천로 167-1 1층 부엌간</li>
-						<li><span>수완 직영점</span> 광주 광산구 수완로106번길 37 1층</li>
-						<li><span>상무 직영본점</span> 광주 서구 서광주로 25 1층</li>
-						<li><span>봉선점</span> 광주 남구 봉선로133번길 15 더플레이스 봉선</li>
-						<li><span>여수점</span> 전남 여수시 돌산읍 백초길 28-58 엘리스테이 여수 4층</li>
-						<li><span>부엌간 해운대점</span>부산 해운대구 달맞이길117번나길 200 2층</li>
-					</ul>
-				</div>
+			<div class="brands-group">
+				<ul class="brands-list">
+					<li class="brands-item">
+						<a href="/sub/brand.html?brand=b1">
+							<h3 class="name">부엌간</h3>
+							<img src="../img/sub/brands/brands_bk.webp" alt="부엌간 이미지" />
+							<div class="overlay"><span class="blind">오버레이 이미지</span></div>
+						</a>
+					</li>
+					<li class="brands-item">
+						<a href="/sub/brand.html?brand=b2">
+							<h3 class="name">부엌간 차이니즈</h3>
+							<img src="../img/sub/brands/brands_bkc.webp" alt="부엌간 차이니즈 이미지" />
+							<div class="overlay"><span class="blind">오버레이 이미지</span></div>
+						</a>
+					</li>
+					<li class="brands-item">
+						<a href="/sub/brand.html?brand=b3">
+							<h3 class="name">카페 드 부엌</h3>
+							<img src="../img/sub/brands/brands_cbk.webp" alt="카페 드 부엌 이미지" />
+							<div class="overlay"><span class="blind">오버레이 이미지</span></div>
+						</a>
+					</li>
+				</ul>
 			</div>
-		</div>
+		</section>
 	</div>
 </div>
 {% endblock %}
