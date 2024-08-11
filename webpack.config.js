@@ -1,13 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssScss = require('postcss-scss');
 
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    filename: 'app.bundle.js',
+    filename: 'app.js',
     path: path.resolve(__dirname, 'dist'),
     // publicPath: '/', // 웹서버의 루트 디렉토리로 설정
   },
@@ -29,17 +30,18 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-        exclude: /node_modules/,
+        use: [
+          MiniCssExtractPlugin.loader, // CSS를 별도 파일로 추출
+          'css-loader', // CSS를 CommonJS로 변환
+        ],
       },
       {
         test: /\.scss$/,
         use: [
-          'style-loader', // 3. Injects styles into DOM
-          'css-loader', // 2. Turns css into commonjs
-          'sass-loader', // 1. Compiles Sass to CSS
+          MiniCssExtractPlugin.loader, // CSS를 별도 파일로 추출
+          'css-loader', // CSS를 CommonJS로 변환
+          'sass-loader', // SCSS를 CSS로 컴파일
         ],
-        exclude: /node_modules/,
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|webp)$/,
@@ -84,6 +86,9 @@ module.exports = {
       // configFile: '.stylelintrc',
       fix: true, // 자동 수정 기능을 활성화
       customSyntax: postcssScss,
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'styles.css', // 추출된 CSS 파일의 이름
     }),
   ],
 };
