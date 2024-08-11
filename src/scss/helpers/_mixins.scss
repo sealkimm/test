@@ -3,3 +3,8 @@
 	width: $width;
 	height: $height;
 }
+
+@mixin textPadding {
+	box-sizing: border-box;
+	padding: 0 20px;
+}

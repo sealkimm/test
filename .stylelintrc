@@ -42,7 +42,6 @@
     "function-comma-newline-after": "always-multi-line",
     "function-comma-space-after": "never",
     "function-comma-space-before": "never",
-    "function-name-case": "lower",
     "function-parentheses-newline-inside": "always-multi-line",
     "function-parentheses-space-inside": "never-single-line",
     "function-whitespace-after": "always",

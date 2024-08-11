@@ -1,12 +1,49 @@
 <header class="header">
-	<div class="header-wrap">
+	<!-- <div class="header-wrap">
 		<h1 class="logo">
 			<a href="/">
 				<img src="../img/common/logo.png" alt="BUUK 로고" />
 			</a>
 		</h1>
-		<p></p>
 		<nav class="nav">
+			<ul class="nav-list">
+				<li class="nav-item">
+					<a href="/sub/about.html" class="nav-link"><span>ABOUT</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="/sub/brands.html" class="nav-link"><span>BRANDS</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="/sub/franchise.html" class="nav-link"><span>FRANCHISE</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="/sub/contact.html" class="nav-link"><span>CONTACT</span></a>
+				</li>
+			</ul>
+		</nav>
+	</div> -->
+</header>
+<header class="mob-header">
+	<div class="header-wrap">
+		<h1 class="logo">
+			<a href="/">
+				<img src="../img/common/mob_logo.png" alt="BUUK 로고" />
+			</a>
+		</h1>
+		<button class="mob-menu">
+			<span>모바일 메뉴</span>
+		</button>
+		<nav class="nav">
+			<div class="row-top">
+				<!-- <div class="logo"> -->
+				<a href="/">
+					<img src="../img/common/mob_logo.png" alt="BUUK 로고" />
+				</a>
+				<!-- </div> -->
+				<button class="btn-close">
+					<img src="../img/common/btn_menu_close.png" alt="메뉴 닫기 버튼" />
+				</button>
+			</div>
 			<ul class="nav-list">
 				<li class="nav-item">
 					<a href="/sub/about.html" class="nav-link"><span>ABOUT</span></a>
@@ -54,5 +91,22 @@
 		if (currentUrl.includes(link)) {
 			item.classList.add('active');
 		}
+	});
+
+	// mob nav.on 효과
+	const $mobHeader = document.querySelector('.mob-header');
+	const $mobMenu = $mobHeader.querySelector('.mob-header .mob-menu');
+	const $nav = $mobHeader.querySelector('.mob-header .nav');
+	const $btnClose = $mobHeader.querySelector('.mob-header .btn-close');
+
+	$mobMenu.addEventListener('click', () => {
+		$nav.classList.add('on');
+	});
+	$btnClose.addEventListener('click', () => {
+		$nav.classList.remove('on');
+	});
+
+	$navItems.forEach((item) => {
+		$nav.classList.remove('on');
 	});
 </script>

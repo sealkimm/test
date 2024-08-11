@@ -30,17 +30,29 @@
 			background-size: cover;
 			transform: translate(-50%,-50%);
 			gap: 90px;
+			@include textPadding();
 			.img {
 				@include size(400px, 93px);
 			}
 			.txt {
 				font-size: 28px;
+				span {
+					display: none;
+				}
+			}
+			@include tab-only {
+				.img {
+					// @include size(pxToVw(400px), pxToVw(93px));
+					// width: pxToVw(400px);
+					// height: pxToVw(93px);
+				}
 			}
 		}
 	}
 
 	.sc-about {
 		position: relative;
+		box-sizing: border-box;
 		padding: 188px 0 250px;
 		.text-group {
 			display: flex;
@@ -49,6 +61,7 @@
 			max-width: 1300px;
 			margin: 0 auto;
 			gap: 120px;
+			@include textPadding();
 			.title {
 				font-size: 60px;
 				font-weight: 600;
@@ -86,55 +99,67 @@
 		@include size(100%, 100vh);
 		position: relative;
 		display: flex;
-		.text-group {
-			@include size(50%, 100%);
-			position: relative;
+		.brands-group {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
 			display: flex;
-			flex-direction: column;
-			align-items: center;
-			box-sizing: border-box;
-			padding: 180px 0 140px;
-			background: $secondary-color;
-			gap: 108px;
-			.title {
-				font-size: 70px;
-				font-weight: 700;
-			}
-			.wrap {
-				position: absolute;
-				top: 390px;
-				text-align: center;
-				.brand {
-					font-size: 60px;
-					font-weight: 600;
-					margin-bottom: 20px;
+			@include size(100%, 100%);
+			.text-area {
+				@include size(50%, 100%);
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				box-sizing: border-box;
+				padding: 180px 20px 140px;
+				background: $secondary-color;
+				gap: 108px;
+				.title {
+					font-size: 70px;
+					font-weight: 700;
 				}
-				.desc {
-					font-size: 24px;
+				.wrap {
+					position: absolute;
+					top: 390px;
+					text-align: center;
+					.brand {
+						font-size: 60px;
+						font-weight: 600;
+						margin-bottom: 20px;
+					}
+					.desc {
+						font-size: 24px;
+					}
+				}
+				.more-link {
+					// 공통
+					display: block;
+					font-size: 28px;
+					line-height: 52px;
+					text-align: center;
+					border: 1px solid $black-color;
+					border-radius: 2vw;
+					margin-top: auto;
+					@include size(218px, 52px);
 				}
 			}
-			.more-link {
-				// 공통
-				display: block;
-				font-size: 28px;
-				line-height: 52px;
-				text-align: center;
-				border: 1px solid $black-color;
-				border-radius: 2vw;
-				margin-top: auto;
-				@include size(218px, 52px);
+			.img-area {
+				@include size(50%, 100%);
 			}
 		}
-		.img-group {
-			@include size(50%, 100%);
-			position: relative;
-			.img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				@include size(100%, 100%);
-			}
-		}
+		// .img-group {
+		// 	@include size(50%, 100%);
+		// 	position: relative;
+		// 	.img {
+		// 		position: absolute;
+		// 		top: 0;
+		// 		left: 0;
+		// 		@include size(100%, 100%);
+		// 	}
+		// }
 		.circle {
 			position: absolute;
 			top: 50%;
@@ -167,6 +192,7 @@
 		background-color: $primary-color;
 		padding-top: 120px;
 		.text-group {
+			@include textPadding();
 			display: flex;
 			align-items: flex-end;
 			width: 100%;
@@ -193,19 +219,7 @@
 				width: 100%;
 				max-width: 1300px;
 				margin: 0 auto;
-				// &::before,
-				// &::after {
-				// 	position: absolute;
-				// 	top: 0;
-				// 	display: block;
-				// 	background-color: $black-color;
-				// 	content: '';
-				// 	@include size(100%, 1px);
-				// }
-				// &::after {
-				// 	top: initial;
-				// 	bottom: 0;
-				// }
+				@include textPadding();
 			}
 			.line {
 				@include size(85%, 1px);
@@ -309,9 +323,12 @@
 			.swiper-wrapper {
 				display: flex;
 				flex-direction: column;
-				gap: 36px;
+				// gap: 36px;
 				transform: translate3d(0,0,0);
 				transition-timing-function: linear;
+				.swiper-slide {
+					height: auto !important;
+				}
 				.card {
 					position: relative;
 					display: block;
@@ -380,6 +397,7 @@
 		background: linear-gradient(to top,rgba(251,248,240,1) 0%,rgba(251,248,240,0) 100%);
 
 		.text-group {
+			@include textPadding();
 			text-align: center;
 			.contact {
 				display: block;
@@ -421,6 +439,150 @@
 			}
 			.img {
 				animation: rollingBtn 8s linear infinite running;
+			}
+		}
+	}
+
+	@include mob-only {
+		.sc-main {
+			@include size(100%, 100vh);
+			overflow: hidden;
+			> img {
+				position: absolute;
+				right: -100px;
+				width: auto;
+			}
+			.title-wrap {
+				top: calc(50% + 28px);
+				.img {
+					display: none;
+				}
+				.txt {
+					font-size: pxToVw3(42px);
+					text-align: center;
+					span {
+						display: block;
+					}
+				}
+			}
+		}
+		.sc-about {
+			@include size(100%, 100vh);
+			padding: pxToVw3(140px) 0 0;
+			.text-group {
+				gap: pxToVw3(100px);
+				.title {
+					font-size: pxToVw3(42px);
+				}
+				.desc {
+					font-size: pxToVw3(32px);
+				}
+			}
+			.img-group {
+				bottom: 0;
+				z-index: -1;
+				.img-wrap {
+					bottom: pxToVw3(64px);
+					gap: pxToVw3(28px);
+					left: pxToVw3(-120px);
+					img {
+						@include size(pxToVw3(240px), pxToVw3(360px));
+					}
+				}
+				.decor {
+					@include size(pxToVw3(490px), pxToVw3(220px));
+				}
+			}
+		}
+		.sc-brands {
+			display: block;
+			height: auto;
+			.brands-group {
+				position: static;
+				display: block;
+				.text-area {
+					width: 100%;
+					padding: pxToVw3(180px) 20px pxToVw3(160px);
+					gap: pxToVw3(100px);
+					.title {
+						font-size: pxToVw3(70px);
+					}
+					.wrap {
+						position: static;
+						.brand {
+							font-size: pxToVw3(60px);
+							margin-bottom: pxToVw3(30px);
+						}
+						.desc {
+							font-size: pxToVw3(30px);
+							word-break: keep-all;
+						}
+					}
+					.more-link {
+						font-size: pxToVw3(32px);
+						line-height: pxToVw3(68px);
+						border-radius: 20vw;
+						margin-top: pxToVw3(80px);
+						@include size(pxToVw3(270px), pxToVw3(68px));
+					}
+				}
+				.img-area {
+					width: 100%;
+				}
+			}
+			.circle {
+				display: none;
+			}
+		}
+		.sc-menu {
+			padding: pxToVw3(140px) 0 0;
+			.text-group {
+				flex-direction: column;
+				align-items: center;
+				gap: pxToVw3(28px);
+				.title {
+					font-size: pxToVw3(60px);
+				}
+				.desc {
+					font-size: pxToVw3(30px);
+					text-align: center;
+					word-break: keep-all;
+				}
+			}
+			.menu-group {
+				border-top-left-radius: pxToVw3(170px);
+				margin-top: pxToVw3(100px);
+				padding: 0 0 pxToVw3(126px);
+				.line {
+					display: none;
+				}
+				.brand-wrap {
+					flex-direction: column;
+					gap: pxToVw3(70px);
+					padding: pxToVw3(90px) 0 pxToVw3(90px);
+					.brand {
+						font-size: pxToVw3(60px);
+					}
+					.menu-list {
+						display: grid;
+						gap: 50px;
+						grid-template-columns: repeat(2,1fr);
+						figcaption {
+							font-size: pxToVw3(30px);
+							margin-top: pxToVw3(40px);
+						}
+					}
+					&.second {
+						flex-direction: column-reverse;
+					}
+				}
+			}
+			.more-link {
+				font-size: pxToVw3(32px);
+				line-height: pxToVw3(68px);
+				border-radius: 20vw;
+				margin-top: pxToVw3(42px);
+				@include size(pxToVw3(270px), pxToVw3(68px));
 			}
 		}
 	}

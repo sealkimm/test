@@ -7,6 +7,7 @@
 		margin: 0 auto;
 	}
 	.text-group {
+		@include textPadding();
 		.main {
 			font-size: 130px;
 			font-weight: 500;
@@ -23,10 +24,15 @@
 		}
 	}
 	.logo-list {
+		@include textPadding();
 		display: flex;
+		gap: 28px;
 		justify-content: space-between;
 		margin-top: 182px;
 		text-align: center;
+		li {
+			// flex-shrink: 0;
+		}
 		.img-box {
 			height: 240px;
 		}

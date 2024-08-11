@@ -26,6 +26,7 @@
 	}
 	.process-group {
 		background-color: $sub-bg-color;
+		@include textPadding();
 		.process-wrap {
 			max-width: 1300px;
 			padding: 192px 0 208px;

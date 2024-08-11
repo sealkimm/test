@@ -1,5 +1,5 @@
 :root {
-	--brandInfo-height: %px;
+	--brandInfo-height: 0;
 }
 
 .brand-pg {
@@ -14,8 +14,9 @@
 		position: absolute;
 		display: none;
 		overflow: hidden;
+		box-sizing: border-box;
 		width: 100%;
-		padding: 160px 0 260px;
+		padding: 160px 20px 260px;
 		.title-group {
 			.title {
 				position: relative;
