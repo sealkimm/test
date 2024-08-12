@@ -7,6 +7,7 @@
 		margin: 0 auto;
 	}
 	.sc-brands {
+		// sc- 바꾸기, brands-group 이런것도
 		position: relative;
 		.title-group {
 			@include textPadding();
@@ -79,6 +80,45 @@
 					}
 					img {
 						transform: scale(1.2);
+					}
+				}
+			}
+		}
+	}
+
+	@include mob-only {
+		padding-top: pxToVw3(110px);
+		.brands-wrap {
+			padding: pxToVw3(190px) 20px pxToVw3(280px);
+		}
+		.sc-brands {
+			.title-group {
+				padding: 0;
+				.title {
+					font-size: pxToVw3(70px);
+					&::before,
+					&::after {
+						width: 22%;
+					}
+				}
+			}
+			.brands-group {
+				padding-top: pxToVw3(210px);
+				.brands-list {
+					flex-direction: column;
+					align-items: center;
+					padding: 0 pxToVw3(32px);
+					gap: pxToVw3(54px);
+				}
+				.brands-item {
+					@include size(100%, pxToVw3(380px));
+					border-radius: pxToVw3(18px);
+					.name {
+						font-size: pxToVw3(50px);
+					}
+					img {
+						position: absolute;
+						top: -100px;
 					}
 				}
 			}

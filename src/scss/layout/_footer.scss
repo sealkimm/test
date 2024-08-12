@@ -45,4 +45,40 @@
 			margin-top: 14px;
 		}
 	}
+
+	@include mob-only {
+		.footer-wrap {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: pxToVw3(110px) 20px;
+		}
+		.col-left {
+			.info {
+				font-size: pxToVw3(30px);
+				margin-top: 36px;
+				p {
+					flex-direction: column;
+					gap: pxToVw3(16px);
+				}
+			}
+			.copy {
+				font-size: pxToVw3(30px);
+				margin-top: 36px;
+			}
+		}
+
+		.col-right {
+			margin-top: 36px;
+			text-align: left;
+			p {
+				font-size: pxToVw3(30px);
+				font-weight: 400;
+			}
+			h2 {
+				font-size: pxToVw3(50px);
+				font-weight: 400;
+				margin-top: 6px;
+			}
+		}
+	}
 }

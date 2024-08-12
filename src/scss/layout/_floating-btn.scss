@@ -54,4 +54,8 @@
 			opacity: 1;
 		}
 	}
+
+	@include mob-only {
+		display: none;
+	}
 }
