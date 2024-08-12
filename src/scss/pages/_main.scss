@@ -148,6 +148,9 @@
 			}
 			.img-area {
 				@include size(50%, 100%);
+				.img {
+					height: 100%;
+				}
 			}
 		}
 		// .img-group {

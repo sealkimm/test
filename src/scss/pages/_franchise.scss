@@ -5,9 +5,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-image: url('../img/sub/franchise_banner.webp');
-		background-repeat: no-repeat;
-		background-position: center;
+		background: url('../img/sub/franchise_banner.webp') no-repeat center/cover;
 		.title {
 			position: relative;
 			z-index: 10;
