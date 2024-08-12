@@ -142,8 +142,15 @@
 					text-align: center;
 					border: 1px solid $black-color;
 					border-radius: 2vw;
+					transition:
+						color .3s,
+						background-color .3s;
 					margin-top: auto;
 					@include size(218px, 52px);
+					&:hover {
+						color: #fff;
+						background-color: $black-color;
+					}
 				}
 			}
 			.img-area {
@@ -258,6 +265,17 @@
 						margin-top: 28px;
 						text-align: center;
 					}
+					li {
+						img {
+							transform-origin: center bottom;
+							transition: transform .3s ease;
+						}
+						&:hover {
+							img {
+								transform: scale(1.1);
+							}
+						}
+					}
 				}
 				&.second {
 					justify-content: flex-end;
@@ -268,16 +286,22 @@
 			}
 		}
 		.more-link {
-			@include size(218px, 52px);
 			display: block;
 			font-size: 28px;
 			line-height: 52px;
 			text-align: center;
 			border: 1px solid $black-color;
 			border-radius: 2vw;
-			// margin-top: auto;
+			transition:
+				color .3s,
+				background-color .3s;
 			margin-left: auto;
 			margin-top: 48px;
+			@include size(218px, 52px);
+			&:hover {
+				color: #fff;
+				background-color: $black-color;
+			}
 		}
 	}
 
